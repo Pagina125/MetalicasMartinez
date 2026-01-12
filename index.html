@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornamentación Metálica Profesional</title>
+    <link rel="icon" type="image/png" href="logopa.png">
+
+
+    <!-- =====================
+         ESTILOS GENERALES
+    ====================== -->
+    <style>
+        :root {
+            --negro: #0f0f0f;
+            --gris-oscuro: #1e1e1e;
+            --gris-medio: #6b6b6b;
+            --gris-claro: #e5e5e5;
+            --blanco: #ffffff;
+            --metal: #9fa3a7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--blanco);
+            color: var(--gris-oscuro);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =====================
+           HEADER / HERO
+        ====================== */
+        
+        header {
+            background: linear-gradient(
+                rgba(0,0,0,0.65),
+                rgba(0,0,0,0.65)
+            ),
+            url("https://i.pinimg.com/1200x/26/a0/5c/26a05c65c16a15a78feabaee4bfd410f.jpg") center/cover no-repeat;
+            height: 100vh;
+            color: var(--blanco);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--gris-claro);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: transparent;
+            border: 2px solid var(--blanco);
+            color: var(--blanco);
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--blanco);
+            color: var(--negro);
+        }
+
+        /* =====================
+           SECCIONES GENERALES
+        ====================== */
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gris-medio);
+        }
+
+        /* =====================
+           SOBRE NOSOTROS
+        ====================== */
+        .about {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+        }
+
+        .about-box {
+            background-color: var(--gris-oscuro);
+            color: var(--blanco);
+            padding: 40px;
+            border-left: 5px solid var(--metal);
+        }
+
+        /* =====================
+           SERVICIOS
+        ====================== */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--blanco);
+            border: 1px solid var(--gris-claro);
+            padding: 35px 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--gris-medio);
+        }
+
+        /* =====================
+           GALERÍA
+        ====================== */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery div {
+            background-color: var(--gris-claro);
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gris-medio);
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .gallery div:hover {
+            background-color: var(--metal);
+            color: var(--blanco);
+        }
+
+        /* =====================
+           CONTACTO
+        ====================== */
+        .contact {
+            background-color: var(--gris-oscuro);
+            color: var(--blanco);
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact .btn {
+            margin-top: 25px;
+        }
+
+        /* =====================
+           FOOTER
+        ====================== */
+        footer {
+            background-color: var(--negro);
+            color: var(--gris-claro);
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.9rem;
+        }
+
+        /* =====================
+           ANIMACIONES
+        ====================== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .redes{
+  margin-top:60px;
+}
+
+.iconos-redes{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-top:20px;
+}
+
+.iconos-redes img{
+  width:40px;
+  transition:.3s;
+}
+
+.iconos-redes img:hover{
+  transform:scale(1.2);}
+
+        /* =====================
+           RESPONSIVE
+        ====================== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================
+         HEADER / HERO
+    ====================== -->
+    <header>
+        <div class="hero-content">
+            <h1>Ornamentación Metálicas</h1>
+            <h1 class="apellido">Martínez</h1>
+            <p>Calidad y precisión en cada detalle</p>
+            <a href="#contacto" class="btn">Contáctanos</a>
+        </div>
+    </header>
+
+    <!-- =====================
+         SOBRE NOSOTROS
+    ====================== -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nosotros</h2>
+                <p>Trabajo artesanal con compromiso y responsabilidad</p>
+            </div>
+
+            <div class="about">
+                <div class="about-text">
+                    Somos un emprendimiento personal especializado en trabajos de ornamentación
+                    y estructuras metálicas. Cada proyecto es realizado de forma personalizada,
+                    con atención directa del encargado, garantizando calidad, seriedad y cumplimiento
+                    en cada detalle.
+                </div>
+
+                <div class="about-box">
+                    Experiencia, responsabilidad y trabajos a medida,
+                    enfocados en brindar soluciones duraderas y estéticas
+                    en hierro, acero y acabados metálicos.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+         SERVICIOS
+    ====================== -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Servicios</h2>
+                <p>Soluciones metálicas profesionales</p>
+            </div>
+
+            <div class="services">
+                <div class="service-card">
+                    <h3>Rejas</h3>
+                    <p>Diseños resistentes y estéticos para seguridad y decoración.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Portones</h3>
+                    <p>Portones metálicos personalizados, manuales o automatizados.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Enchapes</h3>
+                    <p>Acabados metálicos decorativos para interiores y exteriores.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Ornamentación Metálica</h3>
+                    <p>Trabajos en hierro y acero con diseño artesanal.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Trabajos Personalizados</h3>
+                    <p>Proyectos a medida según la necesidad del cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+         GALERÍA
+    ====================== -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Galería de Trabajos</h2>
+                <p>Espacio preparado para mostrar proyectos realizados</p>
+            </div>
+
+            <div class="gallery">
+                <div>Imagen 1</div>
+                <div>Imagen 2</div>
+                <div>Imagen 3</div>
+                <div>Imagen 4</div>
+                <div>Imagen 5</div>
+                <div>Imagen 6</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================
+         CONTACTO
+    ====================== -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>Solicita tu cotización sin compromiso</p>
+            </div>
+
+           <div class="iconos-redes">
+    <a href="URL_WHATSAPP_AQUI" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+    </a>
+    <a href="URL_INSTAGRAM_AQUI" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+    </a>
+    <a href="URL_FACEBOOK_AQUI" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+    </a>
+        </div>
+    </section>
+
+    <!-- =====================
+         FOOTER
+    ====================== -->
+    <footer>
+        <p>© 2026 Ornamentación Metálica. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

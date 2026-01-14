@@ -1,339 +1,304 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ornamentación Metálica Profesional</title>
-    <link rel="icon" type="image/png" href="logopa.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ornamentación Metálica Martínez</title>
+<link rel="icon" type="image/png" href="logopa.png">
 
-    <style>
-        :root {
-            --negro: #0f0f0f;
-            --gris-oscuro: #1e1e1e;
-            --gris-medio: #6b6b6b;
-            --gris-claro: #e5e5e5;
-            --blanco: #ffffff;
-            --metal: #9fa3a7;
-        }
+<style>
+:root{
+--negro:#0f0f0f;
+--gris-oscuro:#1e1e1e;
+--gris-medio:#6b6b6b;
+--gris-claro:#e5e5e5;
+--blanco:#ffffff;
+--metal:#9fa3a7;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+*{margin:0;padding:0;box-sizing:border-box}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--gris-oscuro);
-            line-height: 1.6;
-        }
+body{
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+color:var(--gris-oscuro);
+line-height:1.6;
+}
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
+img{width:100%;display:block}
 
-        
-        header {
-            background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-            url("https://i.pinimg.com/1200x/26/a0/5c/26a05c65c16a15a78feabaee4bfd410f.jpg") center/cover no-repeat;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            padding: 40px;
-        }
+/* ===== HEADER ===== */
+header{
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://i.pinimg.com/1200x/26/a0/5c/26a05c65c16a15a78feabaee4bfd410f.jpg") center/cover no-repeat;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+color:#fff;
+}
 
-        header h1 {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
+header h1{
+font-size:clamp(2rem,6vw,3rem);
+letter-spacing:1px;
+line-height:1.1;
+}
 
-        header p {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            color: #ddd;
-        }
+header p{
+font-size:clamp(1rem,3vw,1.2rem);
+margin:20px 0;
+color:#ddd;
+}
 
-        .btn {
-            padding: 14px 30px;
-            border: 2px solid #fff;
-            color: #fff;
-            text-decoration: none;
-            transition: .3s;
-        }
+.btn{
+display:inline-block;
+padding:14px 32px;
+border:2px solid #fff;
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
 
-        .btn:hover {
-            background: #fff;
-            color: #000;
-        }
+.btn:hover{background:#fff;color:#000}
 
-        section {
-            padding: 80px 20px;
-        }
+/* ===== SECCIONES ===== */
+section{padding:70px 20px}
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
+.container{max-width:1200px;margin:auto}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+.section-title{text-align:center;margin-bottom:45px}
 
-        
-        .about {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-            gap: 40px;
-        }
+.section-title h2{
+font-size:clamp(1.8rem,5vw,2.2rem);
+}
 
-        .about-box {
-            background: var(--gris-oscuro);
-            color: #fff;
-            padding: 40px;
-            border-left: 5px solid var(--metal);
-        }
+/* ===== ABOUT ===== */
+.about{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+text-align:center;
+}
 
-        
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-            gap: 30px;
-        }
+.about-box{
+background:var(--gris-oscuro);
+color:#fff;
+padding:35px;
+border-left:5px solid var(--metal);
+}
 
-        .service-card {
-            border: 1px solid #ddd;
-            padding: 30px;
-            text-align: center;
-            transition: .3s;
-        }
+/* ===== SERVICES ===== */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
 
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(0,0,0,.1);
-        }
+.service-card{
+border:1px solid #ddd;
+padding:30px 20px;
+text-align:center;
+transition:.3s;
+}
 
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-            gap: 25px;
-        }
+.service-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
 
-        .gallery-item {
-            position: relative;
-            height: 240px;
-            overflow: hidden;
-            border-radius: 8px;
-            background: #000;
-        }
+/* ===== GALERÍA ===== */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: .4s;
-        }
+.gallery-item{
+position:relative;
+height:230px;
+overflow:hidden;
+border-radius:8px;
+background:#000;
+}
 
-        .gallery-item:hover img {
-            transform: scale(1.1);
-            opacity: .85;
-        }
+.gallery-item img{
+height:100%;
+object-fit:cover;
+transition:.4s;
+}
 
-        .view-btn {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px 22px;
-            background: rgba(0,0,0,.75);
-            color: #fff;
-            border: 1px solid #fff;
-            cursor: pointer;
-            opacity: 0;
-            transition: .3s;
-        }
+.gallery-item:hover img{
+transform:scale(1.08);
+opacity:.85;
+}
 
-        .gallery-item:hover .view-btn {
-            opacity: 1;
-        }
+.view-btn{
+position:absolute;
+bottom:12px;
+left:50%;
+transform:translateX(-50%);
+padding:9px 20px;
+background:rgba(0,0,0,.75);
+color:#fff;
+border:1px solid #fff;
+opacity:0;
+transition:.3s;
+}
 
-        
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,.9);
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
+.gallery-item:hover .view-btn{opacity:1}
 
-        .modal img {
-            max-width: 90%;
-            max-height: 90%;
-        }
+/* ===== MODAL ===== */
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
 
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 40px;
-            color: #fff;
-            cursor: pointer;
-        }
+.modal img{
+max-width:90%;
+max-height:90%;
+}
 
-        
-        .contact {
-            background: var(--gris-oscuro);
-            color: #fff;
-            text-align: center;
-        }
+.close{
+position:absolute;
+top:20px;
+right:25px;
+font-size:40px;
+color:#fff;
+cursor:pointer;
+}
 
-        .iconos-redes {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 25px;
-        }
+/* ===== CONTACT ===== */
+.contact{
+background:var(--gris-oscuro);
+color:#fff;
+text-align:center;
+}
 
-        .iconos-redes img {
-            width: 40px;
-            transition: .3s;
-        }
+.iconos-redes{
+display:flex;
+justify-content:center;
+gap:25px;
+margin-top:20px;
+}
 
-        .iconos-redes img:hover {
-            transform: scale(1.2);
-        }
+.iconos-redes img{
+width:42px;
+transition:.3s;
+}
 
-        footer {
-            background: #000;
-            color: #ccc;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+.iconos-redes img:hover{transform:scale(1.15)}
+
+footer{
+background:#000;
+color:#ccc;
+text-align:center;
+padding:20px;
+font-size:.9rem;
+}
+
+/* ===== MOBILE AJUSTES ===== */
+@media(max-width:600px){
+section{padding:55px 15px}
+.view-btn{opacity:1}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <div>
-        <h1>Ornamentación Metálica Martínez</h1>
-        <p>Calidad y precisión en cada detalle</p>
-        <a href="#contacto" class="btn">Contáctanos</a>
-    </div>
+<div>
+<h1>Ornamentación Metálicas</h1>
+<h1>Martínez</h1>
+<p>Calidad y precisión en cada detalle</p>
+<a href="#contacto" class="btn">Contáctanos</a>
+</div>
 </header>
 
 <section>
-    <div class="container">
-        <div class="section-title">
-            <h2>Sobre Nosotros</h2>
-        </div>
-        <div class="about">
-            <p>Emprendimiento personal especializado en ornamentación y estructuras metálicas con atención directa del encargado.</p>
-            <div class="about-box">Trabajos personalizados, responsables y duraderos.</div>
-        </div>
-    </div>
+<div class="container">
+<div class="section-title"><h2>Sobre Nosotros</h2></div>
+<div class="about">
+<p>Emprendimiento personal especializado en ornamentación y estructuras metálicas con atención directa del encargado.</p>
+<div class="about-box">Trabajos personalizados, responsables y duraderos.</div>
+</div>
+</div>
 </section>
 
 <section>
-    <div class="container">
-        <div class="section-title">
-            <h2>Servicios</h2>
-         <div class="services">
-                <div class="service-card">
-                    <h3>Rejas</h3>
-                    <p>Diseños resistentes y estéticos para seguridad y decoración.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Portones</h3>
-                    <p>Portones metálicos personalizados, manuales o automatizados.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Ornamentación Metálica</h3>
-                    <p>Trabajos en hierro y acero con diseño artesanal.</p>
-                </div>
-
-                <div class="service-card">
-                    <h3>Trabajos Personalizados</h3>
-                    <p>Proyectos a medida según la necesidad del cliente.</p>
-                </div>
-            </div>
-    </div>
+<div class="container">
+<div class="section-title"><h2>Servicios</h2></div>
+<div class="services">
+<div class="service-card">Rejas</div>
+<div class="service-card">Portones</div>
+<div class="service-card">Ornamentación Metálica</div>
+<div class="service-card">Trabajos Personalizados</div>
+</div>
+</div>
 </section>
 
 <section>
-    <div class="container">
-        <div class="section-title">
-            <h2>Galería de Trabajos</h2>
-        </div>
-
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="reja1.jpeg">
-                <button class="view-btn" onclick="openModal(this)">Ver imagen</button>
-            </div>
-            <div class="gallery-item">
-                <img src="puerta blanca.jpeg">
-                <button class="view-btn" onclick="openModal(this)">Ver imagen</button>
-            </div>
-            <div class="gallery-item">
-                <img src="banca.jpeg">
-                <button class="view-btn" onclick="openModal(this)">Ver imagen</button>
-            </div>
-            <div class="gallery-item">
-                <img src="teja.jpeg">
-                <button class="view-btn" onclick="openModal(this)">Ver imagen</button>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<div class="section-title"><h2>Galería de Trabajos</h2></div>
+<div class="gallery">
+<div class="gallery-item">
+<img src="reja1.jpeg">
+<button class="view-btn" onclick="openModal(this)">Ver imagen</button>
+</div>
+<div class="gallery-item">
+<img src="puerta blanca.jpeg">
+<button class="view-btn" onclick="openModal(this)">Ver imagen</button>
+</div>
+<div class="gallery-item">
+<img src="banca.jpeg">
+<button class="view-btn" onclick="openModal(this)">Ver imagen</button>
+</div>
+<div class="gallery-item">
+<img src="teja.jpeg">
+<button class="view-btn" onclick="openModal(this)">Ver imagen</button>
+</div>
+</div>
+</div>
 </section>
 
 <section id="contacto" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contacto</h2>
-                <p>Solicita tu cotización sin compromiso</p>
-            </div>
-
-           <div class="iconos-redes">
-    <a href="https://wa.link/adbq41" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-    </a>
-
-        </div>
-    </section>
-
+<div class="container">
+<div class="section-title">
+<h2>Contacto</h2>
+<p>Solicita tu cotización sin compromiso</p>
+</div>
+<div class="iconos-redes">
+<a href="https://wa.link/adbq41" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+</div>
+</div>
+</section>
 
 <footer>
-    © Ornamentación Metálica Martínez. Todos los derechos reservados.
+© Ornamentación Metálica Martínez. Todos los derechos reservados.
 </footer>
 
-
 <div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modalImg">
+<span class="close" onclick="closeModal()">&times;</span>
+<img id="modalImg">
 </div>
 
 <script>
-function openModal(btn) {
-    document.getElementById("modalImg").src = btn.previousElementSibling.src;
-    document.getElementById("imageModal").style.display = "flex";
+function openModal(btn){
+document.getElementById("modalImg").src=btn.previousElementSibling.src;
+document.getElementById("imageModal").style.display="flex";
 }
-
-function closeModal() {
-    document.getElementById("imageModal").style.display = "none";
+function closeModal(){
+document.getElementById("imageModal").style.display="none";
 }
 </script>
 
 </body>
 </html>
-
